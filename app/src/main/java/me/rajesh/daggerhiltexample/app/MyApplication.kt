@@ -17,6 +17,5 @@ class MyApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         userRepository.saveUser("rajesh@gmail.com", "1234")
-        println("UserRepo : ${userRepository.hashCode()}")
     }
 }

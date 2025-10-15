@@ -2,7 +2,9 @@ package me.rajesh.daggerhiltexample
 
 import android.util.Log
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class LoggerService @Inject constructor() {
 
     companion object{

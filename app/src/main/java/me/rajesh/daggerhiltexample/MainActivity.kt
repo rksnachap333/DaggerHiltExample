@@ -23,6 +23,12 @@ class MainActivity : ComponentActivity() {
     @FirebaseAnnotation
     lateinit var userRepository: UserRepository
 
+    @Inject
+    lateinit var loggerService1: LoggerService
+
+    @Inject
+    lateinit var loggerService2: LoggerService
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -37,7 +43,6 @@ class MainActivity : ComponentActivity() {
             }
         }
         userRepository.saveUser("rajesh@gmail.com", "123456")
-        println("UserRepo : ${userRepository.hashCode()}")
     }
 }
 
